@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+BITCOIN_CLI=/opt/homebrew/bin/bitcoin-cli
+# connect to localhost:19443
+$BITCOIN_CLI -rpcuser=rpcuser -rpcpassword=rpcpassword -rpcport=19443 "$@"

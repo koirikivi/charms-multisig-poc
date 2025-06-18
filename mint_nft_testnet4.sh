@@ -1,5 +1,8 @@
 #!/bin/bash
 set -ex
+
+THIS_DIR=$(dirname "$(realpath "$0")")
+cd "$THIS_DIR/my-token"
 export app_vk=$(charms app vk)
 
 CHARMS=/Users/rainer/work/sovryn/charms/target/release/charms

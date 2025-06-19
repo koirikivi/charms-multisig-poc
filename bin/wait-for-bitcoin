@@ -1,8 +1,8 @@
 #!/bin/bash
-set -x
+set -e
 
 THIS_DIR=$(dirname "$(realpath "$0")")
-until $THIS_DIR/bitcoin-cli getblockchaininfo 2>/dev/null; do
+until $THIS_DIR/bitcoin-cli getblockchaininfo >/dev/null 2>/dev/null; do
     echo "Waiting for Bitcoin node to be up..."
     sleep 1
 done
